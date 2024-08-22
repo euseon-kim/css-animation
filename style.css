@@ -1,0 +1,292 @@
+/*
+	1. background색을 원하는 색으로 넣어주세요.
+
+	2. 새의 몸통을 원하는대로 꾸며주세요.
+	- 센터정렬하면서 중앙보다 살짝 더 아래 위치하게 해주세요.
+
+*/
+
+body {
+	background: skyblue;
+
+}
+
+.bird {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	animation: boxAni6 1s ease-in-out infinite reverse;
+}
+@keyframes boxAni6 {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform:  translateY(40px) ;
+	}
+}
+.head {
+	position: relative;
+	left: 20px;
+	top: -20px;
+}
+.head-left {
+	width: 20px;
+	height: 40px;
+	background: red;
+	box-shadow: 2px -3px 2px 2px rgb(255, 255, 255,1);
+	border-radius: 50%;
+	float: left;
+	margin-right: -3px;
+	animation: boxAni 0.2s ease-out infinite alternate;
+}
+@keyframes boxAni {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform:  rotate(-45deg) ;
+	}
+}
+.head-mid {
+	width: 20px;
+	height: 40px;
+	background: red;
+	box-shadow: 2px -3px 2px 2px rgb(255, 255, 255,1);
+	border-radius: 50%;
+	float: left;
+	margin-right: -3px;
+	transform-origin: bottom center;
+	animation: boxAni1 0.5s ease-in-out infinite normal;
+}
+@keyframes boxAni1 {
+	0%  {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(360deg);
+	}
+	 100% {
+		transform: rotate(720deg);
+	}
+}
+.head-right {
+	width: 20px;
+	height: 40px;
+	background: red;
+	box-shadow: 2px -3px 2px 2px rgb(255, 255, 255,1);
+	border-radius: 50%;
+	float: left;
+	animation: boxAni2 0.2s ease-out infinite alternate;
+}
+@keyframes boxAni2 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform:  rotate(45deg) ;
+	}
+}
+.body {
+	width: 100px;
+	height: 120px;
+	background: white;
+	border-top-left-radius: 40%;
+	border-top-right-radius: 40%;
+	border-bottom-left-radius: 10%;
+	border-bottom-right-radius: 10%;
+}
+.eye-left {
+	position: absolute;
+	top: 40px;
+	left: 25px;
+	background: black;
+	width: 8px;
+	height: 8px;
+	border-radius: 360px;
+}
+.eye-right {
+	position: absolute;
+	top: 40px;
+	right: 25px;
+	background: black;
+	width: 8px;
+	height: 8px;
+	border-radius: 360px;
+}
+
+.mouth-top {
+	position: absolute;
+	width: 40px;
+	height: 10px;
+	background: orange;
+	top: 60px;
+	left: 31px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+}
+.mouth-bottom {
+	position: absolute;
+	width: 40px;
+	height: 10px;
+	background: orange;
+	top: 75px;
+	left: 31px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	animation: boxAni5 0.4s ease-in-out infinite alternate;
+}
+@keyframes boxAni5 {
+	0% {
+		transform: translateY(0) ;
+	}
+	100% {
+		transform: translateY(-5px);
+	}
+}
+.fly-left {
+	position: absolute;
+	width: 50px;
+	height: 60px;
+	background: red;
+	top: 45px;
+	left: -50px;
+	border-top-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	box-shadow: 2px 8px 20px 2px rgb(255, 102, 0);
+	transform-origin: right	center;
+	animation: boxAni3 0.4s ease-in-out infinite alternate;
+}
+@keyframes boxAni3 {
+	0%, 100% {
+		transform: rotateY(0deg);
+	}
+	10%, 30% {
+		transform: rotateY(100deg);
+	}
+	20%, 40% {
+		transform: rotateY(150deg);
+	}
+	40%, 100% {
+		transform: rotateY(0deg);
+	}
+}
+.fly-right {
+	position: absolute;
+	width: 50px;
+	height: 60px;
+	background: red;
+	top: 45px;
+	left: 100px;
+	border-top-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+	box-shadow: 2px 8px 20px 2px rgb(255, 102, 0);
+	transform-origin: left center;
+	animation: boxAni4 0.4s ease-in-out infinite alternate;
+}
+@keyframes boxAni4 {
+	0%, 100% {
+		transform: rotateY(0deg);
+	}
+	10%, 30% {
+		transform: rotateY(-100deg);
+	}
+	20%, 40% {
+		transform: rotateY(-150deg);
+	}
+	40%, 100% {
+		transform: rotateY(0deg);
+	}
+}
+.final-left {
+	position: absolute;
+	left: 40px;
+	width: 10px;
+	height: 20px;
+	background: red;
+	box-shadow: -2px 3px 2px 2px rgb(255, 102, 1);
+	border-radius: 50%;
+	transform: rotate(45deg);
+}
+.final-right {
+	position: absolute;
+	left: 50px;
+	width: 10px;
+	height: 20px;
+	background: red;
+	box-shadow: 2px 3px 2px 2px rgb(255, 102, 1);
+	border-radius: 50%;
+	transform: rotate(-45deg);
+}
+.egg {
+	position: absolute;
+	left: 46%;
+	top: 132px;
+	width: 10px;
+	height: 20px;
+	background: white;
+	border-radius: 50%;
+	animation: boxAni7 1s ease-in infinite reverse;
+	z-index: 200;
+}
+@keyframes boxAni7 {
+	0% {
+		transform: translateY(100px);
+	}
+	45% {
+		transform: translateY(0);
+	}
+}
+.grass {
+	width: 100%;
+	height: 300px;
+	background: green;
+	margin-top:550px;
+}
+.bascket {
+	z-index: 2;
+	position: absolute;
+	left: 50%;
+	top: 650px;
+	width: 100px;
+	height: 50px;
+	background: brown;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+.eggs1{
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+	top: 75%;
+	width: 10px;
+	height: 20px;
+	background: white;
+	border-radius: 50%;
+	margin-top: -10px;
+}
+.eggs2 {
+	z-index: 1;
+	position: absolute;
+	left: 51%;
+	top: 75%;
+	width: 10px;
+	height: 20px;
+	background: white;
+	border-radius: 50%;
+	margin-top: -10px;
+}
+.eggs3 {
+	z-index: 1;
+	position: absolute;
+	left: 52%;
+	top: 75%;
+	width: 10px;
+	height: 20px;
+	background: white;
+	border-radius: 50%;
+	margin-top: -10px;
+}
